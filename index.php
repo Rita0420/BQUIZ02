@@ -17,12 +17,14 @@
 		style="background:rgba(51,51,51,0.8); color:#FFF; min-height:100px; width:300px; position:fixed; display:none; z-index:9999; overflow:auto;">
 		<pre id="ssaa"></pre>
 	</div>
-	<iframe name="back" style="display:none;"></iframe>
 	<div id="all">
 		<div id="title">
-			00 月 00 號 Tuesday | 今日瀏覽: 1 | 累積瀏覽: 36 </div>
-		<div id="title2">
-
+			<?=date("m 月 d 日 l");?> | 今日瀏覽: 1 | 累積瀏覽: 36 </div>
+			<a href="index.php" style="float:right">回首頁</a>
+			<div id="title2">
+			<a href="index.php">
+			<img src="./icon/02B01.jpg" alt="健康促進網-回首頁" title="健康促進網-回首頁" >
+			</a>
 		</div>
 		<div id="mm">
 			<div class="hal" id="lef">
@@ -34,10 +36,14 @@
 			</div>
 			<div class="hal" id="main">
 				<div>
-
-					<span style="width:18%; display:inline-block;">
+					<div style="display:flex">
+					<marquee behavior="" direction="" style="width:80%">
+						請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地!詳見最新文章
+					</marquee>
+					<span style="width:20%; display:inline-block;">
 						<a href="?do=login">會員登入</a>
 					</span>
+					</div>
 					<div class="">
 					</div>
 				</div>
@@ -46,7 +52,7 @@
 		<div id="bottom">
 			本網站建議使用：IE9.0以上版本，1024 x 768 pixels 以上觀賞瀏覽 ， Copyright © 2012健康促進網社群平台 All Right Reserved
 			<br>
-			服務信箱：health@test.labor.gov.tw<img src="./images/02B02.jpg" width="45">
+			服務信箱：health@test.labor.gov.tw<img src="./icon/02B02.jpg" width="45">
 		</div>
 	</div>
 
