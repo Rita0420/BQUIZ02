@@ -18,8 +18,8 @@
                 <input type="reset" value="清除">
             </td>
             <td>
-                <a href="./forgot.php">忘記密碼</a>
-                <a href="./reg.php">註冊會員</a>
+                <a href="?do=forgot">忘記密碼</a>
+                <a href="?do=reg">註冊會員</a>
             </td>
         </tr>
     </table>
