@@ -1,6 +1,6 @@
 <fieldset>
     <legend>會員登入</legend>
-</fieldset>
+
 
 <form>
     <table>
@@ -24,3 +24,4 @@
         </tr>
     </table>
 </form>
+</fieldset>
