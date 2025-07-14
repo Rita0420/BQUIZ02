@@ -6,15 +6,15 @@
     <table>
         <tr>
             <td>帳號</td>
-            <td><input type="text" name="acc"></td>
+            <td><input type="text" name="acc" id="acc"></td>
         </tr>
         <tr>
             <td>密碼</td>
-            <td><input type="text" name="pw"></td>
+            <td><input type="text" name="pw" id="pw"></td>
         </tr>
         <tr>
             <td>
-                <input type="submit" value="登入">
+                <input type="button" value="登入" onclick="login()">
                 <input type="reset" value="清除">
             </td>
             <td>
@@ -25,3 +25,31 @@
     </table>
 </form>
 </fieldset>
+
+<script>
+    function login(){
+        let data={
+            acc:$('#acc').val(),
+            pw:$('#pw').val()
+        }
+
+        $.get("./api/chk_acc.php",data,(res)=>{
+            if(parseInt(res)){
+                $.get("./api/chk_pw.php",data,(res)=>{
+                    if(parseInt(res)){
+                        if(data.acc=='admin'){
+                            location.href="backend.php";
+                        }else{
+                            location.href="index.php";
+                        }
+                    }else{
+                        alert("密碼錯誤");
+                        location.href="index.php?do=login";
+                    }
+                })
+            }else{
+                alert("查無帳號")
+            }
+        })
+    }
+</script>
