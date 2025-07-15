@@ -11,7 +11,10 @@
             <label for="">選項</label>
             <input type="text" name="option[]" id="item">
             <button onclick="more()" type="button">更多</button>
+        </div>
+        <div>
             <button type="submit">送出</button>
+            <button type="reset">清空</button>
         </div>
     </form>
 </fieldset>
