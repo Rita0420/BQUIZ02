@@ -17,7 +17,7 @@
 </fieldset>
 
 <script>
-    getList(1);
+getList(1);
 
 
 $(".type-link").on("click",function(){
@@ -34,10 +34,6 @@ function getPost(id){
         $("#Post").html(post);
     }) 
 }
-$(".post-item").on("click",function(){
-    let postId=$(this).data("post");
-    getPost(postId);
-})
 
 function getList(type){
     $.get("api/get_type_list.php",{type},function(list){
@@ -49,8 +45,5 @@ function getList(type){
             getPost(postId);
         })
     })
-    
-
-
 }
 </script>
