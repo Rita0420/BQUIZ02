@@ -130,6 +130,8 @@ class DB{
 
 $User=new DB('users');
 $Visit=new DB('visit');
+$News=new DB('news');
+$Que=new DB('que');
 
 if(!isset($_SESSION['visit'])){
     //第一次來訪，檢查有無今日日期
