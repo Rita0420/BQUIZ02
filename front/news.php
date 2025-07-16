@@ -38,8 +38,9 @@
         <td>
             <?php
             if(isset($_SESSION['login'])):
+                $chk=$Log->count(['news'=>$row['id'],'user'=>$_SESSION['login']]);
             ?>
-            <a href="">讚</a>
+            <a href="#" onclick="good(<?=$row['id'];?>)"><?=($chk)?'收回讚':'讚'?></a>
             <?php endif;?>
         </td>
     </tr>
@@ -68,4 +69,10 @@ if($now+1<=$page){
     $(".title").on("click",function(){
         $(this).next().find(".short,.all").toggle();
     })
+
+    function good(news){
+        $.post("./api/good.php",{news},function(){
+            location.reload();
+        })
+    }
 </script>

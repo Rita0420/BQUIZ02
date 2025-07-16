@@ -60,8 +60,9 @@
             <img src="./icon/02B03.jpg" alt="" style="width:20px">
             <?php
             if(isset($_SESSION['login'])):
+                $chk=$Log->count(['news'=>$row['id'],'user'=>$_SESSION['login']]);
             ?>
-            <a href="">-讚</a>
+             <a href="#" onclick="good(<?=$row['id'];?>)"><?=($chk)?'收回讚':'讚'?></a>
             <?php endif;?>
         </td>                                                                                                                                                    
     </tr>
@@ -95,4 +96,10 @@ if($now+1<=$page){
             $(this).next().find(".pop").hide();
         }
     )
+
+    function good(news){
+        $.post("./api/good.php",{news},function(){
+            location.reload();
+        })
+    }
     </script>
