@@ -7,7 +7,7 @@
                 <input type="text" name="subject" id="subject">
             </div>
         </div>
-        <div class="cent item">
+        <div class="cent" id="item">
             <label for="">選項</label>
             <input type="text" name="option[]" id="item">
             <button onclick="more()" type="button">更多</button>
@@ -28,6 +28,6 @@
         </div>
             `;
 
-        $('.item').append(item);
+        $('#item').append(item);
     }
 </script>
