@@ -12,7 +12,6 @@ $options=$Que->all(['subject_id'=>$_GET['id']]);
 <fieldset>
     <legend>目前位置 : 首頁 > 問卷調查 > <?=$subject['text'];?></legend>
     <h3><?=$subject['text'];?></h3>
-    <form action="../api/vote.php" method="post">
     <?php
     foreach($options as $key => $option):
         $total=($subject['vote'] == 0)?1:$subject['vote'];
@@ -30,6 +29,5 @@ $options=$Que->all(['subject_id'=>$_GET['id']]);
         </div>
     </div>
     <?php endforeach;?>
-    <input type="submit" value="我要投票" class="cent">
-    </form>
+    <button onclick="location.href='?do=que'" class="cent">返回</button>
 </fieldset>
